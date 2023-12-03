@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ayewah Princess, showing my projects in Web development, C# c-sharp, and Python. Also, displaying information about me">
+        <meta name="robots" content="index, follow">
+        <link rel="icon" href="favicon.ico">
+        <link rel="canonical" href="https://princessayewah.github.io/wdd-130/portfolio/index.html/#">
+        <link rel="stylesheet" href="styles/site-plan.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <meta property="og:title" content="Ayewah Princess | studying and loving web development">
+        <meta property="og:description" content="Ayewah Princess Portfolio, showing my projects in Web development, C# c-sharp, and Python. Also, displaying information about me">
+        <meta property="og:image" content="images/avatar.png">
+        <meta property="og:url" content="https://princessayewah.github.io/wdd-130/portfolio/index.html/#">
+        <title>Ayewah Princess | studying and loving web development</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar is-dark">
+                <div class="navbar-brand">
+                    <a class="navbar-brand mx-3 my-3" aria-label="Website Logo" href="./">
+                    <img src="images/logo.png" class="image is-64x64" alt="Website Logo">
+                    </a>
+                    <a class="navbar-burger my-3" id="burger">
+                        <span></span><span></span><span></span>
+                    </a>
+                </div>
+        
+                <div class="navbar-menu" id="nav-links">
+                    <div class="navbar-end">
+                        <a class="navbar-item px-6 mx-0 has-text-weight-bold" href="index.html" aria-label="Home"><span>Home</span></a>
+                        <a class="navbar-item px-5 mx-0 has-text-weight-bold" href="aboutme.html" aria-label="About me"><span>About me</span></a>
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="contact-me button is-warning px-5 mx-5 has-text-weight-bold" href="contactme.html" aria-label="Contact me">Contact me!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <form action="https://formspree.io/f/xbjvyzpn" method="POST">
+            <div class="field">
+                <label for="name" class="label">Your name</label>
+                <div class="control">
+                    <input type="text" class="input" name="name" required>
+                </div>
+            </div>
+            <div class="field">
+                <label for="email" class="label">Email</label>
+                <div class="control has-icons-right">
+                    <input id="emailInput" class="input" name="email" type="email" placeholder="email@example.com" required>
+                </div>
+                <p id="emailError" class="help is-danger">Please, enter a valid email</p>
+            </div>
+            <div class="field">
+                <label for="message" class="label">Message</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Hey Princess! I'm interested in..." name="message" required></textarea>
+                </div>
+            </div>
+            <div class="mt-6 has-text-centered">
+              <button type="submit" class="button is-warning" style="background-color: #5BE9B9;">Send email</button>
+
+            </div>
+        </form>
+    </div>
+    <div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+</div>
+</main>
+
+    </main>
+    <footer>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>&copy;2023 | Ayewah Princess | Bulma</p>
+                <div class="is-flex is-justify-content-center">
+                    <a href="./">
+                        <img src="images/logo.png" alt="Website Logo" class="image is-64x64">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </footer>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
